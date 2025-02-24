@@ -13,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Step 2: Generate IoT Dashboard
       - name: Generate IoT Dashboard
         uses: 4211421036/iotgithub@v1.0.1
         with:
@@ -24,3 +26,8 @@ jobs:
           css_filename: 'styles.css'
           site_title: 'IoT Dashboard'
           chart_title: 'IoT Data Chart'
+
+      # Step 3: List files (untuk debug)
+      - name: List files
+        run: |
+          ls -la
