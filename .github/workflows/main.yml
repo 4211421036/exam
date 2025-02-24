@@ -27,7 +27,6 @@ jobs:
           site_title: 'IoT Dashboard'
           chart_title: 'IoT Data Chart'
 
-      # Step 3: List files (untuk debug)
       - name: List files
         run: |
           ls -la
