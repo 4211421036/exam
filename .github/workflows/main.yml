@@ -1,4 +1,4 @@
-name: Generate IoT Dashboard ESP
+name: Generate IoT Dashboard ESP 32
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 jobs:
   generate-dashboard:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
