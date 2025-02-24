@@ -1,0 +1,26 @@
+name: Generate IoT Dashboard
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generate-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate IoT Dashboard
+        uses: 4211421036/iotgithub@v1.0.0
+        with:
+          json_filename: 'data.json'
+          html_filename: 'index.html'
+          css_filename: 'styles.css'
+          site_title: 'IoT Dashboard'
+          chart_title: 'IoT Data Chart'
