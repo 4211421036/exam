@@ -1,4 +1,4 @@
-name: Generate IoT Dashboard
+name: Generate IoT Dashboard ESP
 
 on:
   push:
